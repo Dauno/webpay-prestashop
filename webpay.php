@@ -8,7 +8,7 @@ class Webpay extends PaymentModule {
 		$this->tab = 'payments_gateways';
 		$this->version = '1.0';
 		$this->className = 'Webpay';
-		$this->author = 'Tedos';
+		$this->author = 'dmsoft';
 		$config = Configuration::getMultiple(array('TBK_TIPO_TRANSACCION','TBK_URL_EXITO','TBK_URL_FRACASO','URL_CGI','URL_KCC'));
 		if (isset($config['TBK_TIPO_TRANSACCION']))
             $this->tbk_tipo_transaccion = $config['TBK_TIPO_TRANSACCION'];
