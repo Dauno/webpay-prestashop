@@ -1,5 +1,5 @@
--	Esqueleto modulo weppay para prestasho 1.5 (in completo)
--	==========================
+Esqueleto modulo weppay para prestasho 1.5 (in completo)
+==========================
 
 -	instalación 
 -	Crear carpeta para los archivos de Webpay
@@ -8,8 +8,8 @@
 
 
 
--	Modulo Completo Weppay para prestasho 1.5
--	==========================
+Modulo Completo Weppay para prestasho 1.5
+==========================
 
 Demo tienda con modulo WebPay completo
 
