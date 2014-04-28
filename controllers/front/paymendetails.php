@@ -15,7 +15,7 @@ class WebpayPaymendetailsModuleFrontController extends ModuleFrontController {
 			$cookie->id_currency =  Configuration::get('PS_CURRENCY_DEFAULT');
 			$cart->update();
 		}
-		$log =Configuration::get('URL_KCC')."cgi-bin/log/dato".Tools::getToken(false).".log";
+		$log =Configuration::get('URL_KCC')."log/dato".Tools::getToken(false).".log";
 		$fic = fopen($log, "w+");
 		$linea=number_format($cart->getOrderTotal(true,3),2, '.', '').";".intval($cart->id);
         fwrite ($fic,$linea);
