@@ -1,5 +1,4 @@
-
--	Modulo weppay para prestasho 1.5
+-	Esqueleto modulo weppay para prestasho 1.5
 -	==========================
 
 -	instalación 
