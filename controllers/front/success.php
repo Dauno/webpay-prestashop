@@ -8,7 +8,7 @@ class WebpaySuccessModuleFrontController extends ModuleFrontController
 	public function initContent() {
 		parent::initContent();
 		$TBK_ID_SESION = addslashes(isset($_POST["TBK_ID_SESION"])?$_POST["TBK_ID_SESION"]:"");
-		$filename_txt = Configuration::get('URL_KCC')."cgi-bin/log/MAC01Normal$TBK_ID_SESION.txt";
+		$filename_txt = Configuration::get('URL_KCC')."log/MAC01Normal$TBK_ID_SESION.txt";
 		$datos=$this->leerDatos($filename_txt);
 		$this->context->smarty->assign(array(
 			'id_cart' => addslashes($_POST["TBK_ORDEN_COMPRA"]),
