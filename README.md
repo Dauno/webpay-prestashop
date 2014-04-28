@@ -17,17 +17,20 @@ Demo tienda con modulo WebPay completo
 http://webpay.dmsoft.cl
 
 login cliente demo 
+
 - cliente@demo.cl
 - 123456
 
 Datos demo Webpay
-Número de tarjeta : 4051885600446623
-Vencimiento : cualquiera
-Código Verificación : 123
+
+- Número de tarjeta : 4051885600446623
+- Vencimiento : cualquiera
+- Código Verificación : 123
 
 Transbank
-Rut: 11.111.111-1
-Clave: 123
+
+- Rut: 11.111.111-1
+- Clave: 123
 
 
 
