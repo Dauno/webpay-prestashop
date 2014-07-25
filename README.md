@@ -1,4 +1,4 @@
-Esqueleto modulo webpay para prestasho 1.5 (incompleto)
+Esqueleto modulo webpay para prestasho 1.5-1.6 (incompleto)
 ==========================
 
 instalación 
@@ -8,7 +8,7 @@ instalación
 
 
 
-Modulo Completo Webpay para prestasho 1.5
+Modulo Completo Webpay para prestasho 1.5-1.6
 ==========================
 
 Demo tienda con modulo WebPay completo
