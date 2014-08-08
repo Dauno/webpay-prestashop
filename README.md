@@ -16,7 +16,7 @@ Demo tienda con modulo WebPay completo
 Para mas información del modulo completo 
 contactarse a dauno.marcelo@gmail.com
 
-http://webpay.dmsoft.cl
+http://base.dmsoft.cl/
 
 login cliente demo 
 
