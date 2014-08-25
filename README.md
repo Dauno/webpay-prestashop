@@ -1,4 +1,4 @@
-Esqueleto modulo webpay para prestasho 1.5-1.6 (incompleto)
+Esqueleto modulo webpay para prestashop 1.5-1.6 (incompleto)
 ==========================
 
 instalación 
