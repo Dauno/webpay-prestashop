@@ -19,6 +19,6 @@
     <b>Por favor acepte su pedido pulsando en 'confirmo mi pedido'.</b>
 	<p class="cart_navigation submit">
 		<a class="button" title="Anterior" href="javascript:history.go(-1);">« Otros modos de pago</a>
-		<input class="exclusive" type="submit" value="Confirmo mi Pedido »" name="processCarrier">
+		<input class="exclusive button" type="submit" value="Confirmo mi Pedido »" name="processCarrier">
 	</p>
 </form>

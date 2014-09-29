@@ -15,14 +15,14 @@
 			<span>Ej :http://"url tienda"/index.php?fc=module&module=webpay&controller=failure&id_lang=4</span>
 		</p>
 		<p>
-			<label for="URL_CGI">Url CGI:</label>
+			<label for="URL_CGI">Url tbk_bp_pago.cgi:</label>
 			<input id="URL_CGI" name="URL_CGI" type="text" value="{$URL_CGI}" />
-			<span>Ej :http://"url tienda"/kcc/cgi-bin/tbk_bp_pago.cgi</span>
+			<span>Ej :http://"url tienda"/kcc/tbk_bp_pago.cgi</span>
 		</p>
 		<p>
 			<label for="URL_KCC">Path KCC:</label>
 			<input id="URL_KCC" name="URL_KCC" type="text" value="{$URL_KCC}" />
-			<span>Ej :/var/www/path tienda/kcc</span>
+			<span>Ej :/var/www/path tienda/kcc/</span>
 		</p>
 		<p>
 			<label>&nbsp;</label>

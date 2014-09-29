@@ -10,11 +10,33 @@ class WebpaySuccessModuleFrontController extends ModuleFrontController
 		$TBK_ID_SESION = addslashes(isset($_POST["TBK_ID_SESION"])?$_POST["TBK_ID_SESION"]:"");
 		$filename_txt = Configuration::get('URL_KCC')."log/MAC01Normal$TBK_ID_SESION.txt";
 		$datos=$this->leerDatos($filename_txt);
+		$id_cart=addslashes($_POST["TBK_ORDEN_COMPRA"]);
+
+		$cart = new Cart(intval($id_cart));
+		$orderId = Order::getOrderByCartId((int)$id_cart);
+		$order = new Order((int)$orderId);
+		$nombreTienda=Configuration::get('PS_SHOP_NAME');
+		$urlTienda=Tools::getHttpHost(true).__PS_BASE_URI__;
+		$products = $cart->getProducts(true);
+		$orderTotal=$cart->getOrderTotal();
+		$shippingCost=$cart->getOrderTotal(true, Cart::ONLY_SHIPPING);
+		$shippingCostTaxExc=$cart->getOrderTotal(false, Cart::ONLY_SHIPPING);
 		$this->context->smarty->assign(array(
-			'id_cart' => addslashes($_POST["TBK_ORDEN_COMPRA"]),
+			'id_cart' => $id_cart,
+			'products' => $products,
+			'nombreTienda' => $nombreTienda,
+			'orderId' => $orderId,
+			'urlTienda' => $urlTienda,
+			'order' => $order,
 		));
-		$this->context->smarty->assign($datos);
-		$this->setTemplate('success.tpl');
+		$Webpay = new Webpay();
+		if (file_exists($filename_txt) and $Webpay->countRegWebPayData(array("id_cart"=>$id_cart))>0) {
+			$this->context->smarty->assign($datos);
+			$this->setTemplate('success.tpl');
+		}else{
+			$this->context->smarty->assign(array('id_cart' => $id_cart));
+			$this->setTemplate('failure.tpl');
+		}
 	}
 
 	public function leerDatos($myPath){
@@ -41,13 +63,11 @@ class WebpaySuccessModuleFrontController extends ModuleFrontController
 	    $anio=date("Y");
 	    $FECHA=explode("-",$TBK_FECHA_TRANSACCION[1]);
 
-	    //$TBK_FECHA_TRANSACCION = $anio."-".$FECHA[1]."-".$FECHA[0];
 	    $TBK_FECHA_TRANSACCION = $FECHA[0]."-".$FECHA[1]."-".$anio;
 	    $data['id_cart']=$TBK_ORDEN_COMPRA[1];
-	    $data['id_sesion']=$TBK_ID_SESION;
 	    $data['transaction_type']=$TBK_TIPO_TRANSACCION[1];
 	    $data['response']=$TBK_RESPUESTA[1];
-	    $data['amount']=substr($TBK_MONTO[1], 0,  strlen($TBK_MONTO[1])-2).".".substr($TBK_MONTO[1],strlen($TBK_MONTO[1])-2,  strlen($TBK_MONTO[1]));
+	    $data['amount']= substr($TBK_MONTO[1], 0, strlen($TBK_MONTO[1]) - 2);
 	    $data['code_autorization']=$TBK_CODIGO_AUTORIZACION[1];
 	    $data['date_transaction']=$TBK_FECHA_TRANSACCION;
 	    $data['hour_transaction']=$TBK_HORA_TRANSACCION[1];

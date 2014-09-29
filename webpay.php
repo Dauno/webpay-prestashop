@@ -8,7 +8,7 @@ class Webpay extends PaymentModule {
 		$this->tab = 'payments_gateways';
 		$this->version = '1.0';
 		$this->className = 'Webpay';
-		$this->author = 'dmsoft';
+		$this->author = 'dmsoft.cl';
 		$config = Configuration::getMultiple(array('TBK_TIPO_TRANSACCION','TBK_URL_EXITO','TBK_URL_FRACASO','URL_CGI','URL_KCC'));
 		if (isset($config['TBK_TIPO_TRANSACCION']))
             $this->tbk_tipo_transaccion = $config['TBK_TIPO_TRANSACCION'];
@@ -32,9 +32,6 @@ class Webpay extends PaymentModule {
 		$this->description = $this->l('Acepta pagos via Web Pay, compatible con prestashop 1.5.');
 
 		$this->confirmUninstall = $this->l('Estas seguro que deseas desinstalar?');
-
-		//$this->_checkContent();
-
 		$this->context->smarty->assign('module_name', $this->name);
 	}
 
@@ -93,8 +90,7 @@ class Webpay extends PaymentModule {
   	}
 
 	public function hookDisplayHeader() {
-		$this->context->controller->addCSS($this->_path.'css/style.css', 'all');
-		$this->context->controller->addJS($this->_path.'js/script.js', 'all');
+		$this->context->controller->addCSS($this->_path.'css/style-webpay.css', 'all');
 	}
 	public function hookPayment($params) {
       if (!$this->active)

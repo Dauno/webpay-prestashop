@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>webpay</name>
+	<displayName><![CDATA[Webpay]]></displayName>
+	<version><![CDATA[1.0]]></version>
+	<description><![CDATA[Acepta pagos via Web Pay, compatible con prestashop 1.5.]]></description>
+	<author><![CDATA[dmsoft]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Estas seguro que deseas desinstalar?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
