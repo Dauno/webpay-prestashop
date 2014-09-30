@@ -18,9 +18,6 @@ class WebpaySuccessModuleFrontController extends ModuleFrontController
 		$nombreTienda=Configuration::get('PS_SHOP_NAME');
 		$urlTienda=Tools::getHttpHost(true).__PS_BASE_URI__;
 		$products = $cart->getProducts(true);
-		$orderTotal=$cart->getOrderTotal();
-		$shippingCost=$cart->getOrderTotal(true, Cart::ONLY_SHIPPING);
-		$shippingCostTaxExc=$cart->getOrderTotal(false, Cart::ONLY_SHIPPING);
 		$this->context->smarty->assign(array(
 			'id_cart' => $id_cart,
 			'products' => $products,
