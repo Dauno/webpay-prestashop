@@ -14,7 +14,8 @@ Modulo Completo Webpay para prestasho 1.5-1.6
 Demo tienda con modulo WebPay completo
 
 Para mas información del modulo completo 
-contactarse a dauno.marcelo@gmail.com
+contactarse a dauno.marcelo@gmail.com o http://modulowp.dmsoft.cl/
+
 
 http://base.dmsoft.cl/
 
