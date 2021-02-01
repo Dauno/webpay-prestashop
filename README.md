@@ -8,33 +8,5 @@ instalación
 
 
 
-Modulo Completo Webpay para prestasho 1.5-1.6
-==========================
-
-Demo tienda con modulo WebPay completo
-
-Para mas información del modulo completo 
-contactarse a dauno.marcelo@gmail.com o http://modulowp.dmsoft.cl/
-
-
-http://base.dmsoft.cl/
-
-login cliente demo 
-
-- cliente@demo.cl
-- 123456
-
-Datos demo Webpay
-
-- Número de tarjeta : 4051885600446623
-- Vencimiento : cualquiera
-- Código Verificación : 123
-
-Transbank
-
-- Rut: 11.111.111-1
-- Clave: 123
-
-
 
 
